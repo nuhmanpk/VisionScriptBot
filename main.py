@@ -1,5 +1,5 @@
 from pyrogram import filters , Client
-from pyrogram.types import Message
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from dotenv import load_dotenv
 import os
 import google.generativeai as genai
@@ -11,6 +11,10 @@ API_HASH  = os.getenv('API_HASH')
 API_ID  = os.getenv('API_ID')
 BOT_TOKEN  = os.getenv('BOT_TOKEN')
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+
+GITHUB_BUTTON = InlineKeyboardMarkup(
+            [[InlineKeyboardButton("Follow me on Github Source Code", url='https://github.com/nuhmanpk/')]]
+        )
 
 app= Client('VisionScriptBot',
             api_hash=API_HASH,api_id=int(API_ID),
@@ -56,7 +60,7 @@ async def vision(bot,message:Message):
         response = model.generate_content(img)
         os.remove(file_path)
         await txt.delete()
-        await message.reply(response.text)
+        await message.reply(response.text,reply_markup=GITHUB_BUTTON)
     except Exception as e:
         await message.reply('Something Bad occured, Contact @bughunter0')
         raise e

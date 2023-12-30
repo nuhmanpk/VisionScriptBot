@@ -1,0 +1,22 @@
+{
+    "name": "VisionScriptBot",
+    "env": {
+        "API_ID": {
+            "description": "your app id, take it from my.telegram.org",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "your app Hash, take it from my.telegram.org",
+            "value": ""
+        },
+        "BOT_TOKEN": {
+            "description": "Bot Token From @botFather",
+            "value": ""
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}

@@ -60,7 +60,13 @@ async def vision(bot,message:Message):
         response = model.generate_content(img)
         os.remove(file_path)
         await txt.delete()
-        await message.reply(response.text,reply_markup=GITHUB_BUTTON)
+        await message.reply(response.text)
+        msg =    ("📢 **Exciting Announcement!** 📢\n\n"
+        "I'm thrilled to let you know that the source code for this bot will be posted soon on GitHub! 🚀\n\n"
+        "Stay tuned and make sure to **Follow Me** here on Telegram for the latest updates. 🌟\n\n"
+        "Thank you for your support! 👏\n\n"
+        "Happy Coding! 🚀")
+        await message.reply(msg,reply_markup=GITHUB_BUTTON)
     except Exception as e:
         await message.reply('Something Bad occured, Contact @bughunter0')
         raise e

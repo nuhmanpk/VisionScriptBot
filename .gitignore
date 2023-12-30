@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+*.session
+*.session-journal
+
 # C extensions
 *.so
 

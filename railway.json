@@ -1,0 +1,11 @@
+{
+    "build": {
+      "builder": "HEROKU"
+    },
+    "deploy": {
+      "numReplicas": 1,
+      "sleepApplication": false,
+      "restartPolicyType": "ON_FAILURE",
+      "restartPolicyMaxRetries": 10
+    }
+  }

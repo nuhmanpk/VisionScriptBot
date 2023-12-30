@@ -41,3 +41,8 @@ Gemini Pro Vision is a foundation model that performs well at a variety of multi
 1. Captioning and description: Generate descriptions of images and videos with varying levels of details.
 
 1. Reasoning: Compositionally infer new information without memorization or retrieval.
+
+
+## Demo
+
+![](https://github.com/nuhmanpk/VisionScriptBot/blob/main/demos/Screenshot_20231230-115838.png)

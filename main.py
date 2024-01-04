@@ -72,14 +72,13 @@ async def help_command(_, message: Message):
 async def vision(bot,message:Message):
     try:
         model_name = 'gemini-pro-vision'
+        sticker_id = random.choice(stickers)
+        sticker = await message.reply_sticker(sticker_id)
         txt = await message.reply(f'Loading {model_name} ...')
         model = genai.GenerativeModel(model_name)
-        await txt.edit("Model Loaded")
         await txt.edit('Downloading Photo ....')
         file_path = await message.download()
         img = PIL.Image.open(file_path)
-        sticker_id = random.choice(stickers)
-        sticker = await message.reply_sticker(sticker_id)
         await txt.edit('Shhh 🤫 , Gemini Vision Pro is At Work ⚠️. Pls Wait...')
         response = model.generate_content(img)
         os.remove(file_path)

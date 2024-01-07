@@ -85,7 +85,7 @@ async def vision(bot,message:Message):
         await sticker.delete()
         await txt.delete()
         if response.text:
-            await message.reply_to_message(response.text)
+            await message.reply(response.text)
         else:
             await message.reply('Couldn\'t figure out what\'s in the Image. Contact @bughunter0 for help.')
     except Exception as e:

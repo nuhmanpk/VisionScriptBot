@@ -35,7 +35,7 @@ stickers = ['CAACAgEAAxkBAAEYAqRlkq0-L_85eTtO6GdIFmZQ1--GTQACSwIAAsF-IUTpsXse4dU
             ]
 
 GITHUB_BUTTON = InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Follow me on Github Source Code", url='https://github.com/nuhmanpk/')]]
+            [[InlineKeyboardButton("Source Code", url='https://github.com/nuhmanpk/VisionScriptBot')]]
         )
 
 app= Client('VisionScriptBot',
@@ -88,12 +88,6 @@ async def vision(bot,message:Message):
             await message.reply(response.text)
         else:
             await message.reply('Couldn\'t figure out what\'s in the Image. Contact @bughunter0 for help.')
-        msg =    ("📢 **Exciting Announcement!** 📢\n\n"
-        "I'm thrilled to let you know that the source code for this bot will be posted soon on GitHub! 🚀\n\n"
-        "Stay tuned and make sure to **Follow Me** here on Telegram for the latest updates. 🌟\n\n"
-        "Thank you for your support! 👏\n\n"
-        "Happy Coding! 🚀")
-        await message.reply(msg,reply_markup=GITHUB_BUTTON)
     except Exception as e:
         await message.reply('Something Bad occured, Contact @bughunter0')
         raise e
@@ -101,5 +95,13 @@ async def vision(bot,message:Message):
 @app.on_message(filters.document & filters.private)
 async def document(bot,message:Message):
     await message.reply('Documents are not supported, Please the File as Image !!!\n\n @BughunterBots')
-    
+
+@app.on_message(filters.command('source') & filters.private)
+async def source(bot,message:Message):
+        msg =    (
+        "Here is the source code for the bot 🚀\n\n"
+        "Follow me for updates , and add Your star if you find this helpful 🌟\n\n"
+        "Thank you for your support! 👏\n\n"
+        "Happy Coding! 🚀")
+        await message.reply(msg,reply_markup=GITHUB_BUTTON)
 app.run(print('Bot Started...'))

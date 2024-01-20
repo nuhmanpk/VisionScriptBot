@@ -85,7 +85,7 @@ async def vision(bot,message:Message):
         await sticker.delete()
         await txt.delete()
         if response.text:
-            await message.reply(response.text)
+            await message.reply(response.text,reply_markup=GITHUB_BUTTON)
         else:
             await message.reply('Couldn\'t figure out what\'s in the Image. Contact @bughunter0 for help.')
     except Exception as e:

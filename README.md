@@ -1,10 +1,18 @@
 # VisionScriptBot
-A telegram bot that uses Google's Gemini Pro Vision API 
+A telegram bot that uses Google's Gemini Pro Vision API , Take a demo [here](https://t.me/visionscriptbot) 
+
+### Gemini Vision Pro
+
+Gemini Pro Vision is a Gemini large language vision model that understands input from text and visual modalities (image and video) in addition to text to generate relevant text responses.
+
+Gemini Pro Vision is a foundation model that performs well at a variety of multimodal tasks such as visual understanding, classification, summarization, and creating content from image and video. It's adept at processing visual and text inputs such as photographs, documents, infographics, and screenshots.
 
 ## Gemini API 
 VisionScriptBot uses Google new [Gemini Pro Model](https://ai.google.dev/docs) . 
 
-[Gemini](https://deepmind.google/technologies/gemini/) is Google's latest family of large language models. This site contains all the info you need to start building applications with Gemini.
+[Gemini](https://deepmind.google/technologies/gemini/) is Google's latest family of [large language models](https://blog.google/technology/ai/google-gemini-ai/#performance).
+
+### API KEY
 
 You need Google Api key 🔐 for Gemini to run this model. 
 Get your api key from 
@@ -20,13 +28,9 @@ pip install -q -U google-generativeai
 
 for complete guide [refer](https://ai.google.dev/tutorials/python_quickstart)
 
+### Deploy
 
-### Gemini Vision Pro
-
-Gemini Pro Vision is a Gemini large language vision model that understands input from text and visual modalities (image and video) in addition to text to generate relevant text responses.
-
-Gemini Pro Vision is a foundation model that performs well at a variety of multimodal tasks such as visual understanding, classification, summarization, and creating content from image and video. It's adept at processing visual and text inputs such as photographs, documents, infographics, and screenshots.
-
+Deployed on [Railway.app](https://railway.app?referralCode=O6FeyZ) , do checkout their free hosting plans [here](https://railway.app?referralCode=O6FeyZ) 
 
 #### Use cases
 
@@ -46,3 +50,8 @@ Gemini Pro Vision is a foundation model that performs well at a variety of multi
 ## Demo
 
 ![](https://github.com/nuhmanpk/VisionScriptBot/blob/main/demos/Screenshot_20231230-115838.png)
+
+## Support
+
+If You find this project useful, Do support me [here](https://github.com/sponsors/nuhmanpk) 
+

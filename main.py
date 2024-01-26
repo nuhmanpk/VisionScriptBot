@@ -6,7 +6,7 @@ import google.generativeai as genai
 import PIL.Image
 import random
 
-from .stickers import stickers
+from stickers import stickers
 
 load_dotenv()
 

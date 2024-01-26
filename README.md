@@ -1,5 +1,5 @@
 # VisionScriptBot
-A telegram bot that uses Google's Gemini Pro Vision API , Take a demo [here](https://t.me/visionscriptbot) 
+A telegram bot that uses Google's Gemini Pro Vision API , Take a demo [here](https://t.me/visionscriptbot). New Version support prompts along with Images, Add your prompt in Image caption before uploading the Image.
 
 ### Gemini Vision Pro
 

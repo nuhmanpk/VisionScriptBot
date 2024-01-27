@@ -1,13 +1,12 @@
+from dotenv import load_dotenv
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-from dotenv import load_dotenv
-import os
+from stickers import stickers
 import google.generativeai as genai
+import os
 import PIL.Image
 import random
 import time
-
-from stickers import stickers
 
 load_dotenv()
 
@@ -49,7 +48,7 @@ async def start(_, message: Message):
 async def help_command(_, message: Message):
     help_message = (
         "🤖 **How to use the Transcription Bot**\n\n"
-        "1. **Send an Image:** Simply send me an image containing text that you want transcribed.\nGot any question regarding the image? add it the image caption before uploading."
+        "1. **Send an Image:** Simply send me an image containing text that you want transcribed.\nGot any question regarding the image? add it in the image caption before uploading.\n"
         "2. **Wait for Transcription:** I'll process the image and provide you with the transcribed text.\n\n"
         "For updates and more bots, join @BughunterBots 🚀\n"
     )
@@ -75,7 +74,7 @@ async def vision(bot, message: Message):
             else model.generate_content(img)
         )
         os.remove(file_path)
-        await txt.edit('Formating the Result...')
+        await txt.edit('@VisionScriptBot is cooking...')
         await sticker.delete()
         await txt.delete()
         if response.parts: # handle multiline resps

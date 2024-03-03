@@ -79,7 +79,7 @@ async def vision(bot, message: Message):
         await txt.delete()
         if response.parts: # handle multiline resps
            for part in response.parts:
-            await message.reply(part, reply_markup=GITHUB_BUTTON)
+            await message.reply(part.text, reply_markup=GITHUB_BUTTON)
             time.sleep(2)
         elif response.text:
             await message.reply(response.text, reply_markup=GITHUB_BUTTON)

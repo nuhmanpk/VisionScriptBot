@@ -1,3 +1,5 @@
+# /usr/bin/nuhman/bughunter0 
+
 from dotenv import load_dotenv
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
